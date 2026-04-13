@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Profile Image -->
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pranjali"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dherepranjali08@gmail.com"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginTop="6dp"/>
+
+        <!-- ABOUT SECTION -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Me"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I am an Android learner and aspiring developer who loves building simple and user-friendly mobile applications."
+            android:textSize="15sp"
+            android:textColor="#444444"
+            android:layout_marginTop="6dp"/>
+
+        <!-- SKILLS SECTION -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvSkills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Java\n• Android Development\n• XML Layouts\n• UI Design"
+            android:textSize="15sp"
+            android:textColor="#444444"
+            android:layout_marginTop="6dp"/>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</ScrollView>
