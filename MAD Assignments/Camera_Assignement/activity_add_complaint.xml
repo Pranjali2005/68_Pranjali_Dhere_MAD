@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E293B"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📝 New Complaint"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#F8FAFC"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- IMAGE PREVIEW CARD -->
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="0dp"
+                card_view:cardBackgroundColor="#1E293B"
+                android:layout_marginBottom="16dp">
+
+                <!-- PLACEHOLDER shown when no image selected -->
+                <LinearLayout
+                    android:id="@+id/imagePlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#1E293B">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📷"
+                        android:textSize="48sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No photo selected"
+                        android:textSize="14sp"
+                        android:textColor="#475569"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use Camera or Gallery below"
+                        android:textSize="12sp"
+                        android:textColor="#334155"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- ACTUAL IMAGE -->
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CAMERA + GALLERY ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/cameraBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="📷 Camera"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:backgroundTint="#6366F1"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/galleryBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="🖼 Gallery"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4F46E5"/>
+
+            </LinearLayout>
+
+            <!-- DESCRIPTION LABEL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Description"
+                android:textSize="13sp"
+                android:textColor="#94A3B8"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- DESCRIPTION INPUT -->
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Describe the issue in detail..."
+                android:textColor="#F8FAFC"
+                android:textSize="15sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:background="@drawable/input_bg"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- SUBMIT BUTTON -->
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Submit Complaint"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6366F1"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
