@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="0dp"
+    card_view:cardBackgroundColor="#1E293B">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- COMPLAINT IMAGE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPLAINT PHOTO"
+            android:textSize="10sp"
+            android:textColor="#475569"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="6dp"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:background="#0F172A"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <!-- PROOF LABEL -->
+        <TextView
+            android:id="@+id/proofLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✅ Proof submitted by Authority"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#10B981"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"/>
+
+        <!-- PROOF IMAGE -->
+        <ImageView
+            android:id="@+id/proofImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:background="#0F172A"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#334155"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- DESCRIPTION -->
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complaint description"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#F1F5F9"/>
+
+        <!-- STATUS + DATE ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏳ Pending"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#F59E0B"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/status_bg"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Date"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/resolve"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Action"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#10B981"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/reject"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Reject"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#EF4444"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
